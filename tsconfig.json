@@ -1,29 +1,38 @@
 {
-   "compilerOptions": {
-      "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "outDir": "./dist",
-      "module": "commonjs",
-      "target": "es2019",
-      "esModuleInterop": true,
-      "sourceMap": true,
-      "rootDirs": [
-         "src",
-         "tests"
-      ],
-      "baseUrl": "src",
-      "paths": {
-         "@/tests/*": [
-            "../tests/*"
-         ],
-         "@/*": [
-            "*"
-         ]
-      }
-   },
-   "include": [
-      "src",
-      "tests"
-   ],
-   "exclude": []
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "./dist",
+    "module": "commonjs",
+    "target": "es2019",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "rootDirs": ["src", "tests"],
+    "baseUrl": "src",
+
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "allowUnreachableCode": false,
+    "noFallthroughCasesInSwitch": true,
+
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "strictPropertyInitialization": false,
+    "skipDefaultLibCheck": true,
+
+    "paths": {
+      "@/tests/*": ["../tests/*"],
+      "@/*": ["*"]
+    }
+  },
+  "include": ["src", "tests"],
+  "exclude": []
 }

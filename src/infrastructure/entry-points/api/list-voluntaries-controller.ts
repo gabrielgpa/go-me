@@ -1,15 +1,19 @@
-import { IListVoluntariesService, LIST_VOLUNTARIES_SERVICE } from "@/domain/use-cases/list-voluntaries-service";
-import {Mapping, Get, Adapter} from "@tsclean/core";
+import { Mapping, Get, Adapter } from '@tsclean/core';
+
+import {
+  IListVoluntariesService,
+  LIST_VOLUNTARIES_SERVICE,
+} from '@/domain/use-cases/list-voluntaries-service';
 
 @Mapping('api/v1/voluntaries')
 export class ListVoluntariesController {
+  constructor(
+    @Adapter(LIST_VOLUNTARIES_SERVICE)
+    private readonly listVoluntariesService: IListVoluntariesService
+  ) {}
 
-    constructor(
-        @Adapter(LIST_VOLUNTARIES_SERVICE) private readonly listVoluntariesService: IListVoluntariesService
-    ) {}
-    
-    @Get()
-    async getWelcome(): Promise<any> {
-        return await this.listVoluntariesService.listVoluntariesService();
-    }
+  @Get()
+  async getWelcome(): Promise<any> {
+    return this.listVoluntariesService.listVoluntariesService();
+  }
 }
