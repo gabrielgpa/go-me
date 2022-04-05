@@ -1,4 +1,4 @@
-## Awesome Project Build with Clean Architecture
+## goMe Project
 
 Steps to run this project:
 
