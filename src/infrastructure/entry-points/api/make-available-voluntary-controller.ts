@@ -13,20 +13,17 @@ export class MakeAvailableVoluntaryController {
     private readonly makeAvailableVoluntaryService: IMakeAvailableVoluntaryService
   ) {}
 
-  @Patch(':voluntaryId')
+  @Patch(':id')
   async handle(
-    @Param() voluntaryId: MakeAvailableVoluntaryController.Request,
+    @Param() id: MakeAvailableVoluntaryController.Request,
     @Body() data: any
   ): Promise<any> {
-    return this.makeAvailableVoluntaryService.makeAvailable(
-      voluntaryId.voluntaryId,
-      data
-    );
+    return this.makeAvailableVoluntaryService.makeAvailable(id.id, data);
   }
 }
 
 export namespace MakeAvailableVoluntaryController {
   export type Request = {
-    voluntaryId: string | null;
+    id: string | null;
   };
 }
