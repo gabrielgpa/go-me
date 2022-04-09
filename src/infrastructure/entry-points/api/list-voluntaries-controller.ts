@@ -13,7 +13,7 @@ export class ListVoluntariesController {
   ) {}
 
   @Get()
-  async getWelcome(): Promise<any> {
-    return this.listVoluntariesService.listVoluntariesService();
+  async handle(): Promise<any> {
+    return this.listVoluntariesService.load();
   }
 }

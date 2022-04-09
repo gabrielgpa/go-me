@@ -14,7 +14,7 @@ export class ListVoluntariesServiceImpl implements IListVoluntariesService {
     private readonly listVoluntariesRepository: IListVoluntariesRepository
   ) {}
 
-  async listVoluntariesService(): Promise<VoluntaryModel[]> {
-    return this.listVoluntariesRepository.listVoluntariesRepository();
+  async load(): Promise<VoluntaryModel[]> {
+    return this.listVoluntariesRepository.load();
   }
 }

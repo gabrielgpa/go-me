@@ -4,7 +4,7 @@ export const MAKE_AVAILABLE_VOTUNTATY_REPOSITORY =
   'MAKE_AVAILABLE_VOTUNTATY_REPOSITORY';
 
 export interface IMakeAvailableVoluntaryRepository {
-  makeAvailableRepository: (
+  makeAvailable: (
     voluntaryId: string,
     data: IMakeAvailableVoluntaryRepository.Params
   ) => Promise<VoluntaryModel>;

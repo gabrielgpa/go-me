@@ -14,9 +14,7 @@ export class AddVoluntaryController {
   ) {}
 
   @Post()
-  async addUserController(
-    @Body() data: AddVoluntaryParams
-  ): Promise<VoluntaryModel> {
-    return this.addVoluntaryService.addVoluntaryService(data);
+  async handle(@Body() data: AddVoluntaryParams): Promise<VoluntaryModel> {
+    return this.addVoluntaryService.add(data);
   }
 }

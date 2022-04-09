@@ -16,11 +16,11 @@ export class MakeAvailableVoluntaryServiceImpl
     private readonly MakeAvailableVoluntaryRepository: IMakeAvailableVoluntaryRepository
   ) {}
 
-  async makeAvailableVoluntarySevice(
+  async makeAvailable(
     voluntaryId: string,
     data: IMakeAvailableVoluntaryService.Params
   ): Promise<VoluntaryModel> {
-    return this.MakeAvailableVoluntaryRepository.makeAvailableRepository(
+    return this.MakeAvailableVoluntaryRepository.makeAvailable(
       voluntaryId,
       data
     );

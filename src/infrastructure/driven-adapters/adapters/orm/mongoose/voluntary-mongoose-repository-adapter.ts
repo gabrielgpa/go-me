@@ -10,17 +10,15 @@ export class VoluntaryMongooseRepositoryAdapter
     IListVoluntariesRepository,
     IMakeAvailableVoluntaryRepository
 {
-  async addVoluntaryRepository(
-    data: AddVoluntaryParams
-  ): Promise<VoluntaryModel> {
+  async add(data: AddVoluntaryParams): Promise<VoluntaryModel> {
     return VoluntaryModelSchema.create(data);
   }
 
-  async listVoluntariesRepository(): Promise<VoluntaryModel[]> {
+  async load(): Promise<VoluntaryModel[]> {
     return VoluntaryModelSchema.find();
   }
 
-  async makeAvailableRepository(
+  async makeAvailable(
     voluntaryId: string,
     data: IMakeAvailableVoluntaryRepository.Params
   ): Promise<VoluntaryModel> {

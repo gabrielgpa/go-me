@@ -4,7 +4,7 @@ export const MAKE_AVAILABLE_VOTUNTATY_SERVICE =
   'MAKE_AVAILABLE_VOTUNTATY_SERVICE';
 
 export interface IMakeAvailableVoluntaryService {
-  makeAvailableVoluntarySevice: (
+  makeAvailable: (
     voluntaryId: string,
     data: IMakeAvailableVoluntaryService.Params
   ) => Promise<VoluntaryModel>;

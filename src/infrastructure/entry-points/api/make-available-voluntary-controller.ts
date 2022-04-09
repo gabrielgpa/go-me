@@ -18,7 +18,7 @@ export class MakeAvailableVoluntaryController {
     @Param() voluntaryId: MakeAvailableVoluntaryController.Request,
     @Body() data: any
   ): Promise<any> {
-    return this.makeAvailableVoluntaryService.makeAvailableVoluntarySevice(
+    return this.makeAvailableVoluntaryService.makeAvailable(
       voluntaryId.voluntaryId,
       data
     );

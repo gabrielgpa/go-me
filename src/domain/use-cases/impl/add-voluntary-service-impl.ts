@@ -14,7 +14,7 @@ export class AddVoluntaryServiceImpl implements IAddVoluntaryService {
     private readonly addVoluntaryRepository: IAddVoluntaryRepository
   ) {}
 
-  async addVoluntaryService(data: AddVoluntaryParams): Promise<VoluntaryModel> {
-    return this.addVoluntaryRepository.addVoluntaryRepository(data);
+  async add(data: AddVoluntaryParams): Promise<VoluntaryModel> {
+    return this.addVoluntaryRepository.add(data);
   }
 }
