@@ -13,7 +13,7 @@ const schema = new Schema<RaffleModel>(
     voluntary: { type: Schema.Types.ObjectId, ref: 'voluntaries' },
   },
   {
-    timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' },
+    timestamps: { createdAt: 'created_at' },
     versionKey: false,
   }
 );

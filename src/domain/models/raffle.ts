@@ -8,7 +8,7 @@ export type RaffleModel = {
 // eslint-disable-next-line @typescript-eslint/no-redeclare
 export namespace RaffleModel {
   export enum RaffleTypeModel {
-    DAILY,
+    DAILY = 'DAILY',
   }
 }
 
