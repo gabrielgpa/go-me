@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import 'module-alias/register';
 
 import { StartProjectInit } from '@tsclean/core';

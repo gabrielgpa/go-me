@@ -1,5 +1,5 @@
 export type VoluntaryModel = {
-  id: string | number;
+  id?: any;
   name: string;
   email: string;
   available: boolean;
