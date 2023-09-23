@@ -1,0 +1,11 @@
+- Sorteio
+  - Gravar resultado do sorteio 
+    - Criar contrato - OK
+    - Criar mecanismo de sorteio - pendente
+  - Listar sorteios - pendente
+- Autenticacao - pendente
+- validacoes de erros
+  - Se o email ja existir, nao adicionar novamente - pendente
+  - Se o id informado for invalido, retornar erro - pendente
+    - Ao deletar - pendente
+    - Ao marcar como disponível/indisponível - pendente

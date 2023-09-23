@@ -16,8 +16,8 @@ export class VoluntaryMongooseRepositoryAdapter
     return VoluntaryModelSchema.create(data);
   }
 
-  async load(): Promise<VoluntaryModel[]> {
-    return VoluntaryModelSchema.find();
+  async load(filter: any = {}, props: any = {}): Promise<VoluntaryModel[]> {
+    return VoluntaryModelSchema.find(filter, props).lean();
   }
 
   async makeAvailable(

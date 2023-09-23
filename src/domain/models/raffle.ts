@@ -1,8 +1,8 @@
 export type RaffleModel = {
   id?: any;
-  type: RaffleModel.RaffleTypeModel | string;
+  type?: RaffleModel.RaffleTypeModel | string;
   voluntary: any;
-  createdAt: Date;
+  createdAt?: Date;
 };
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
@@ -12,4 +12,4 @@ export namespace RaffleModel {
   }
 }
 
-export type AddRaffleParams = Omit<RaffleModel, 'id'>;
+export type MakeRaffleParams = Omit<RaffleModel, 'id'>;
