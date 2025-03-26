@@ -9,18 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4.3.0
         with:
           node-version: 'node'
     
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.2.2
 
       - name: install dependencies
         run: npm i
 
   call-reusable:
-    uses: gabrielgpa/tst-ci/.github/workflows/reusable-workflow.yml@v1
+    uses: gabrielgpa/tst-ci/.github/workflows/reusable-workflow.yml@v1.0.0
     with:
       environment: production
 
