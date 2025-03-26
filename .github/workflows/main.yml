@@ -1,0 +1,27 @@
+name: Go Me Workflow
+
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'node'
+    
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: install dependencies
+        run: npm i
+
+  call-reusable:
+    uses: gabrielgpa/tst-ci/.github/workflows/reusable-workflow.yml@v1
+    with:
+      environment: production
+
+      
